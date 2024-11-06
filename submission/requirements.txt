@@ -1,0 +1,7 @@
+gigachain==0.1.17
+gigagraph==0.0.45
+python-dotenv==1.0.1
+polars==1.0.0
+chromadb==0.5.3
+sentence-transformers==3.0.1
+gensim==4.3.3
