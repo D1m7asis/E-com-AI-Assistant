@@ -39,7 +39,10 @@ class RecommenderNode(BaseNode):
         last_message = state["messages"][-1]
         assert isinstance(last_message, FunctionMessage)
 
-        vector_top = search_items(self.llm_prettifier.invoke({"query": last_message, "requirements": state["requirements"]}),
+        vector_top = search_items(
+            self.llm_prettifier.invoke(
+                {"query": last_message.content, "requirements": state["requirements"]}
+            ),
                                   items_collection,
                                   20,
                                   state["requirements"]["category"],)
